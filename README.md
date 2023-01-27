@@ -10,7 +10,7 @@ One of the most well known ways to break the ice or start a new conversation is 
 - Ability to view weather data including temperature, precipitation, and forecasts for multiple cities from a list of favorites
 - Weather data is queried from external API
 - Ability to answer questions about the weather or post text comments for the community to see
-- Community contributions and messages are displayed in real time
+- Community contributions and messages are displayed in real time using Web Sockets
 - Community contributions are persistently stored to view later
 
 ### GitHub Assignment
