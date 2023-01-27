@@ -1,4 +1,19 @@
-# startup
+# Startup Deliverable
+## Elevator Pitch
+One of the most well known ways to break the ice or start a new conversation is to ask about the weather. Sometimes we even joke about how simple of a conversation starter this is. So, why don't we actually get some useful information from our chats about the weather? WeatherChat is the weather app that lets the community chat about the weather and help each other out. Is it raining? Let the town know! Is there ice on the roads? Let your neighbors know that they should be careful out there! WeatherChat turns the old school weather ice breaker into crowdsourced, accurate weather data.
+
+## Sketch Mockup
+![WeatherChatMockup](https://user-images.githubusercontent.com/63749412/214992274-933bfe57-b9cd-4fec-9e27-8cd51f109b43.jpeg)
+
+## Key Features
+- Secure login over HTTPS to view your list of cities and contribute data
+- Ability to view weather data including temperature, precipitation, and forecasts for multiple cities from a list of favorites
+- Weather data is queried from external API
+- Ability to answer questions about the weather or post text comments for the community to see
+- Community contributions and messages are displayed in real time
+- Community contributions are persistently stored to view later
+
+### GitHub Assignment
 
 CS 260 Startup Application Project
 
