@@ -26,3 +26,7 @@ This is a modification from GitHub.
 This is another modification from GitHub.
 
 This is another modification from VSCode. It will cause a merge conflict. Now resolved.
+
+### Notes from simon-html assignment
+
+This assignment was quite interesting. I learned quite a few new things. In particular, I found it quite interesting how many HTML tags are purely for semantics and don't serve much of a visual purpose. Surely they'll come in handy in future things, but it was interesting to see how much HTML is about structure that isn't even visible on the site. I also found it interesting seeing how the header/footer for each page had to be copied over because they were in different documents. I also learned a bit about `.sh` scripts and the need to set them as executable when creating new ones. Overall this was a very useful assignemnt.
