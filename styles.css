@@ -19,7 +19,7 @@ main {
 }
 
 section:nth-child(1) {
-  flex: 1;
+  flex: 2;
   background-color: lightgrey;
   padding-left: 25px;
   padding-right: 25px;
@@ -27,14 +27,14 @@ section:nth-child(1) {
 }
 
 section:nth-child(2) {
-  flex: 4;
+  flex: 6;
   background-color: white;
   padding-left: 25px;
   padding-top: 15px;
 }
 
 section:nth-child(3) {
-  flex: 1;
+  flex: 3;
   background-color: lightgrey;
   padding-left: 25px;
   padding-right: 25px;
