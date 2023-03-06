@@ -38,3 +38,7 @@ This assignment was quite interesting. I learned quite a few new things. In part
 ### Notes from HTML/CSS Startup Assignment
 
 The biggest thing that I took away from this assignment was that I should always check Bootstrap before doing anything. Often, the thing that I'd like to do can easily be done by using some sort of class from Bootstrap. However, I often forget that and attempt to do something by myself. Going forward, I need to do a better job at using Bootstrap as a resource. I also learned that I have a ways to go when it comes to understanding how to space things in CSS using flex. I often confused myself while using it, but eventually was able to figure it out.
+
+### Notes from simon-javascript assignment
+
+It was interesting to see just how much you can accomplish with so little code in JavaScript. In particular, it was cool to see how JS uses the DOM to easily access individual elements and make it so that you can interact with them. Using JS to access and play .mp3 files was a new concept for me. As was the use of local storage to persist data to the user's browser across reloads. It was interesting learning how the placement of the `<script>` tag in an HTML document can affect when it is loaded and therefore impact its ability to access certain elements on the page. Overall, it was a very useful assignment.
