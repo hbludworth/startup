@@ -11,6 +11,12 @@ header {
   padding-top: 15px;
 }
 
+footer {
+  flex: 0 80px;
+  padding-left: 25px;
+  padding-top: 15px;
+}
+
 main {
   flex: 1;
   display: flex;
