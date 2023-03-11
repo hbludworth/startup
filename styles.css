@@ -52,3 +52,11 @@ section:nth-child(3) {
     flex-direction: column;
   }
 }
+
+.hide {
+  display: none;
+}
+
+.city-card {
+  cursor: pointer;
+}

@@ -1,76 +1,76 @@
 const mockWeather = (city) => ({
   city,
-  temperature: 34,
+  temperature: Math.round(Math.random() * 80),
   conditions: 'Sunny',
-  precipitationPercentage: 42,
-  humidityPercentage: 37,
+  precipitationPercentage: Math.round(Math.random() * 100),
+  humidityPercentage: Math.round(Math.random() * 100),
   hourlyForecast: [
     {
       hour: '3',
       meridian: 'PM',
-      temperature: 32,
+      temperature: Math.round(Math.random() * 80),
       conditions: 'Partly Cloudy',
     },
     {
       hour: '4',
       meridian: 'PM',
-      temperature: 30,
+      temperature: Math.round(Math.random() * 80),
       conditions: 'Partly Cloudy',
     },
     {
       hour: '5',
       meridian: 'PM',
-      temperature: 30,
+      temperature: Math.round(Math.random() * 80),
       conditions: 'Partly Cloudy',
     },
     {
       hour: '6',
       meridian: 'PM',
-      temperature: 29,
+      temperature: Math.round(Math.random() * 80),
       conditions: 'Cloudy',
     },
     {
       hour: '7',
       meridian: 'PM',
-      temperature: 27,
+      temperature: Math.round(Math.random() * 80),
       conditions: 'Cloudy',
     },
     {
       hour: '8',
       meridian: 'PM',
-      temperature: 26,
+      temperature: Math.round(Math.random() * 80),
       conditions: 'Partly Cloudy',
     },
   ],
   weeklyForecast: [
     {
       day: 'Mon',
-      temperature: 32,
+      temperature: Math.round(Math.random() * 80),
       conditions: 'Partly Cloudy',
     },
     {
       day: 'Tues',
-      temperature: 30,
+      temperature: Math.round(Math.random() * 80),
       conditions: 'Partly Cloudy',
     },
     {
       day: 'Wed',
-      temperature: 30,
+      temperature: Math.round(Math.random() * 80),
       conditions: 'Partly Cloudy',
     },
     {
       day: 'Thurs',
-      temperature: 29,
+      temperature: Math.round(Math.random() * 80),
       conditions: 'Cloudy',
     },
     {
       day: 'Fri',
-      temperature: 27,
+      temperature: Math.round(Math.random() * 80),
       conditions: 'Cloudy',
     },
     {
       day: 'Sat',
-      temperature: 45,
+      temperature: Math.round(Math.random() * 80),
       conditions: 'Partly Cloudy',
     },
   ],
@@ -79,19 +79,19 @@ const mockWeather = (city) => ({
 const mockCities = [
   {
     name: 'Provo',
-    temperature: 34,
+    temperature: Math.round(Math.random() * 80),
   },
   {
     name: 'Seattle',
-    temperature: 37,
+    temperature: Math.round(Math.random() * 80),
   },
   {
     name: 'New York',
-    temperature: 27,
+    temperature: Math.round(Math.random() * 80),
   },
   {
     name: 'Sydney',
-    temperature: 64,
+    temperature: Math.round(Math.random() * 80),
   },
 ];
 

@@ -21,8 +21,33 @@
         <h2>My Cities</h2>
         <div id="cityList">CITY LIST LOADS HERE</div>
 
+        <hr id="addCityDivider" class="hide" />
+
+        <div id="cityInput" class="text-center hide">
+          <div id="emailHelp" class="form-text">Enter a city name</div>
+          <input
+            id="cityInputBox"
+            type="email"
+            class="form-control"
+            aria-describedby="emailHelp"
+            placeholder="Ex: Tokyo"
+          />
+        </div>
+
         <div class="text-center mt-4">
-          <button type="button" class="btn btn-primary">Add City</button>
+          <button
+            type="button"
+            id="addCityConfirmButton"
+            class="btn btn-primary hide"
+          >
+            OK
+          </button>
+        </div>
+
+        <div class="text-center mt-4">
+          <button type="button" id="addCityButton" class="btn btn-primary">
+            Add City
+          </button>
         </div>
       </section>
       <section class="mb-4">

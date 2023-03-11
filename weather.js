@@ -99,7 +99,7 @@ const displayCityList = (cities) => {
   for (let i = 0; i < cities.length; i++) {
     const city = cities[i];
     const card = document.createElement('div');
-    card.classList.add('card', 'mb-2');
+    card.classList.add('card', 'mb-2', 'city-card');
     if (i === 0) {
       card.classList.add('mt-4');
     }
@@ -132,10 +132,53 @@ const displayCityList = (cities) => {
     cardBody.appendChild(cardRow);
     card.appendChild(cardBody);
     cityList.appendChild(card);
+
+    card.addEventListener('click', () => changeCity(city.name, i));
   }
 };
 
-const weatherData = getWeatherData('Seattle');
+const prepareAddCity = () => {
+  document.getElementById('addCityDivider').classList.remove('hide');
+  document.getElementById('cityInput').classList.remove('hide');
+  document.getElementById('addCityButton').classList.add('hide');
+  document.getElementById('addCityConfirmButton').classList.remove('hide');
+};
+
+const addCity = () => {
+  // FIXME Will add server call here
+
+  // Mock data
+  const city = document.getElementById('cityInputBox').value;
+  cityData.push({ name: city, temperature: Math.round(Math.random() * 80) });
+  displayCityList(cityData);
+  document.getElementById('addCityDivider').classList.add('hide');
+  document.getElementById('cityInput').classList.add('hide');
+  document.getElementById('addCityButton').classList.remove('hide');
+  document.getElementById('addCityConfirmButton').classList.add('hide');
+  document.getElementById('cityInputBox').value = '';
+};
+
+const changeCity = (city, idx) => {
+  const weatherData = getWeatherData(city);
+  displayWeatherData(weatherData);
+  document
+    .querySelectorAll('.city-card')
+    .forEach((card) => (card.style.backgroundColor = 'white'));
+  document.querySelectorAll('.city-card')[idx].style.backgroundColor =
+    'darkgrey';
+};
+
+const weatherData = getWeatherData('Provo');
 displayWeatherData(weatherData);
 const cityData = getUserCities();
 displayCityList(cityData);
+
+document.querySelector('.city-card').style.backgroundColor = 'darkgrey';
+
+document
+  .getElementById('addCityButton')
+  .addEventListener('click', prepareAddCity);
+
+document
+  .getElementById('addCityConfirmButton')
+  .addEventListener('click', addCity);
