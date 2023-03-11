@@ -42,3 +42,7 @@ The biggest thing that I took away from this assignment was that I should always
 ### Notes from simon-javascript assignment
 
 It was interesting to see just how much you can accomplish with so little code in JavaScript. In particular, it was cool to see how JS uses the DOM to easily access individual elements and make it so that you can interact with them. Using JS to access and play .mp3 files was a new concept for me. As was the use of local storage to persist data to the user's browser across reloads. It was interesting learning how the placement of the `<script>` tag in an HTML document can affect when it is loaded and therefore impact its ability to access certain elements on the page. Overall, it was a very useful assignment.
+
+### Notes from JavaScript Startup Assignment
+
+From this assignment, I learned a ton about using the DOM to manipulate the HTML document using JavaScript. It was super beneficial to see how easy it is to make these changes and to use things like `input` elements to make changes to the page. I also learned how to clear and change data based on user interaction. Though I'm only using mock data for the time being, it was easy to see how server calls could be integrated easily going forward. Super useful assignment.
