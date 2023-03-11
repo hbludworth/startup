@@ -112,6 +112,8 @@ const displayWeatherData = (data) => {
   document.getElementById(
     'chillyInnerProgressBar'
   ).textContent = `${data.community.chillyPercentage}%`;
+
+  setupCommunityChat(data.community.chat);
 };
 
 const getUserCities = () => {
@@ -189,6 +191,7 @@ const addCity = () => {
 };
 
 const changeCity = (city, idx) => {
+  document.querySelectorAll('.message-card').forEach((card) => card.remove());
   const weatherData = getWeatherData(city);
   displayWeatherData(weatherData);
   document
@@ -196,6 +199,49 @@ const changeCity = (city, idx) => {
     .forEach((card) => (card.style.backgroundColor = 'white'));
   document.querySelectorAll('.city-card')[idx].style.backgroundColor =
     'darkgrey';
+};
+
+const setupCommunityChat = (chat) => {
+  const chatCard = document.getElementById('chatCard');
+
+  for (let i = 0; i < chat.length; i++) {
+    const message = chat[i];
+
+    const cardRow = document.createElement('div');
+    cardRow.classList.add(
+      'message-card',
+      'd-flex',
+      message.me ? 'flex-row-reverse' : 'flex-row'
+    );
+
+    const messageBubble = document.createElement('div');
+    messageBubble.classList.add(
+      'card',
+      'mb-2',
+      message.me ? 'bg-primary' : 'bg-secondary'
+    );
+
+    const messageBody = document.createElement('div');
+    messageBody.classList.add('card-body', 'py-1', 'px-2');
+
+    const messageText = document.createElement('p');
+    messageText.classList.add('card-text', 'text-white');
+    messageText.textContent = message.message;
+
+    messageBody.appendChild(messageText);
+    messageBubble.appendChild(messageBody);
+    cardRow.appendChild(messageBubble);
+    chatCard.appendChild(cardRow);
+  }
+};
+
+const sendMessage = () => {
+  const message = document.getElementById('messageBox').value;
+
+  document.querySelectorAll('.message-card').forEach((card) => card.remove());
+  weatherData.community.chat.push({ message, me: true });
+  displayWeatherData(weatherData);
+  document.getElementById('messageBox').value = '';
 };
 
 const weatherData = getWeatherData('Provo');
@@ -284,3 +330,5 @@ document.getElementById('chillyUp').addEventListener('click', () => {
       chillyValue + 1 + '%';
   }
 });
+
+document.getElementById('sendButton').addEventListener('click', sendMessage);

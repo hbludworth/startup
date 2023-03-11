@@ -80,7 +80,7 @@ const mockWeather = (city) => ({
     chillyPercentage: Math.round(Math.random() * 100),
     chat: [
       {
-        message: 'Power is out in a few places in Orem.',
+        message: `Power is out in a few places in ${city}.`,
         me: false,
       },
       {
