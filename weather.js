@@ -82,6 +82,36 @@ const displayWeatherData = (data) => {
   document.getElementById('day4').textContent = `${data.weeklyForecast[3].day}`;
   document.getElementById('day5').textContent = `${data.weeklyForecast[4].day}`;
   document.getElementById('day6').textContent = `${data.weeklyForecast[5].day}`;
+
+  document
+    .getElementById('cloudyProgressBar')
+    .setAttribute('aria-valuenow', data.community.cloudyPercentage);
+  document.getElementById(
+    'cloudyInnerProgressBar'
+  ).style.width = `${data.community.cloudyPercentage}%`;
+  document.getElementById(
+    'cloudyInnerProgressBar'
+  ).textContent = `${data.community.cloudyPercentage}%`;
+
+  document
+    .getElementById('rainyProgressBar')
+    .setAttribute('aria-valuenow', data.community.rainyPercentage);
+  document.getElementById(
+    'rainyInnerProgressBar'
+  ).style.width = `${data.community.rainyPercentage}%`;
+  document.getElementById(
+    'rainyInnerProgressBar'
+  ).textContent = `${data.community.rainyPercentage}%`;
+
+  document
+    .getElementById('chillyProgressBar')
+    .setAttribute('aria-valuenow', data.community.chillyPercentage);
+  document.getElementById(
+    'chillyInnerProgressBar'
+  ).style.width = `${data.community.chillyPercentage}%`;
+  document.getElementById(
+    'chillyInnerProgressBar'
+  ).textContent = `${data.community.chillyPercentage}%`;
 };
 
 const getUserCities = () => {
@@ -182,3 +212,75 @@ document
 document
   .getElementById('addCityConfirmButton')
   .addEventListener('click', addCity);
+
+document.getElementById('cloudyDown').addEventListener('click', () => {
+  const cloudy = document.getElementById('cloudyProgressBar');
+  const cloudyValue = parseInt(cloudy.getAttribute('aria-valuenow'));
+  if (cloudyValue > 0) {
+    cloudy.setAttribute('aria-valuenow', cloudyValue - 1);
+    document.getElementById('cloudyInnerProgressBar').style.width =
+      cloudyValue - 1 + '%';
+    document.getElementById('cloudyInnerProgressBar').textContent =
+      cloudyValue - 1 + '%';
+  }
+});
+
+document.getElementById('cloudyUp').addEventListener('click', () => {
+  const cloudy = document.getElementById('cloudyProgressBar');
+  const cloudyValue = parseInt(cloudy.getAttribute('aria-valuenow'));
+  if (cloudyValue < 100) {
+    cloudy.setAttribute('aria-valuenow', cloudyValue + 1);
+    document.getElementById('cloudyInnerProgressBar').style.width =
+      cloudyValue + 1 + '%';
+    document.getElementById('cloudyInnerProgressBar').textContent =
+      cloudyValue + 1 + '%';
+  }
+});
+
+document.getElementById('rainyDown').addEventListener('click', () => {
+  const rainy = document.getElementById('rainyProgressBar');
+  const rainyValue = parseInt(rainy.getAttribute('aria-valuenow'));
+  if (rainyValue > 0) {
+    rainy.setAttribute('aria-valuenow', rainyValue - 1);
+    document.getElementById('rainyInnerProgressBar').style.width =
+      rainyValue - 1 + '%';
+    document.getElementById('rainyInnerProgressBar').textContent =
+      rainyValue - 1 + '%';
+  }
+});
+
+document.getElementById('rainyUp').addEventListener('click', () => {
+  const rainy = document.getElementById('rainyProgressBar');
+  const rainyValue = parseInt(rainy.getAttribute('aria-valuenow'));
+  if (rainyValue < 100) {
+    rainy.setAttribute('aria-valuenow', rainyValue + 1);
+    document.getElementById('rainyInnerProgressBar').style.width =
+      rainyValue + 1 + '%';
+    document.getElementById('rainyInnerProgressBar').textContent =
+      rainyValue + 1 + '%';
+  }
+});
+
+document.getElementById('chillyDown').addEventListener('click', () => {
+  const chilly = document.getElementById('chillyProgressBar');
+  const chillyValue = parseInt(chilly.getAttribute('aria-valuenow'));
+  if (chillyValue > 0) {
+    chilly.setAttribute('aria-valuenow', chillyValue - 1);
+    document.getElementById('chillyInnerProgressBar').style.width =
+      chillyValue - 1 + '%';
+    document.getElementById('chillyInnerProgressBar').textContent =
+      chillyValue - 1 + '%';
+  }
+});
+
+document.getElementById('chillyUp').addEventListener('click', () => {
+  const chilly = document.getElementById('chillyProgressBar');
+  const chillyValue = parseInt(chilly.getAttribute('aria-valuenow'));
+  if (chillyValue < 100) {
+    chilly.setAttribute('aria-valuenow', chillyValue + 1);
+    document.getElementById('chillyInnerProgressBar').style.width =
+      chillyValue + 1 + '%';
+    document.getElementById('chillyInnerProgressBar').textContent =
+      chillyValue + 1 + '%';
+  }
+});
